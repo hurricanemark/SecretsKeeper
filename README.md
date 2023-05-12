@@ -1,6 +1,6 @@
 ﻿# ASP.NET MVC WebApp <-> Secrets Keeper
 
-This is a full-stack MVS web application in C#HTML (Razor) in the Microsoft Visual Studio 20023 IDE Community Edition and .NET 6.
+This is a full-stack MVS web application in C#HTML (Razor) in the Microsoft Visual Studio 2020 IDE Community Edition and .NET 6.
 
 
 ## What is ASP.NET Core?
