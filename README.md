@@ -114,7 +114,7 @@ Added View : \Views\Secrets\Index.cshtml
 
 
  
-##### Create & configure the database
+### Create & configure the database
 
 Traditionally, there are at least two ways to create database, DAO and ORM.
 
