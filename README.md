@@ -1,4 +1,4 @@
-﻿# ASP.NET MVC WebApp <-> Secrets Keeper
+﻿# ASP.NET Core MVC WebApp <-> Secrets Keeper
 
 This is a full-stack MVS web application in C#HTML (Razor) in the Microsoft Visual Studio 2020 IDE Community Edition and .NET 6.
 
@@ -11,6 +11,7 @@ This is a full-stack MVS web application in C#HTML (Razor) in the Microsoft Visu
 
 * ASP -> Active Server Page: Dynamic web pages, usually connected to a database.  It replaced the Classic ASP technology.
 * Core -> open source, cross-platform version of ASP.
+
 Together, ASP.NET Core is Full Stack having (database, business logic, HTML)
 
 An ASP.NET page is web page that contains a mix of HTML markup and dynamic ASP markup.  An ASP.NET is run on the server, combining the static HTML code, and updating the dynamic ASP elements to produce a final HTML page.
@@ -28,6 +29,7 @@ Initial project MVC scaffolding should be compilable and runable.
 ![](./Static/ToolsSetAction.PNG)
 
 * Initial looks and feel
+
 ![Initial project creation](./Static/WebAppEntryPoint.PNG)
 
 <br />
@@ -55,7 +57,7 @@ The __M__ odel __V__ iew __C__ ontroller helps to enforce separation of concerns
 1. Right click on `Views` folder and select `Add` -> `Class..`
 1. Inside the ```public class Secret { }```, type `prop` and tab twice.
 1. Type `ctor` and tab twice to generate code for empty constructor.
-1. 
+
 ```javascript
     public class Secret {
         public int Id { get; set; }
@@ -92,6 +94,7 @@ The __M__ odel __V__ iew __C__ ontroller helps to enforce separation of concerns
 1. The folder `View` -> `Secrets` contains files { Create.cshtml, Delete.cshtml, Details.cshtml, Edit.cshtml, Index.cshtml  }.
 
 __Console output:__
+
 ```javascript
 Finding the generator 'controller'...
 Running the generator 'controller'...
@@ -114,6 +117,7 @@ Added View : \Views\Secrets\Index.cshtml
 ##### Create & configure the database
 
 Traditionally, there are at least two ways to create database, DAO and ORM.
+
 1. __Data Access Object (DAO)__
 * Manually create tables
 * Traditional method of database access.
@@ -136,6 +140,7 @@ We will use the ORM method `migrate` to map views logic (a class) to the databas
 1. type __update-database__ then enter.
 
 __Console output:__
+
 ```javascript
 ...
 
@@ -178,6 +183,7 @@ PM>
 #### Add routes to the NavBar
 
 1. Open file `View` -> `Shared` - `_Layout.cshtml`
+
 1. Insert new <li> element in the between the <ul class="navbar-nav flex-grow-1"> element as follow
 
 ```javascript
@@ -211,6 +217,7 @@ PM>
 * File `Views` -> `Secrets` - 'ShowSearchForm.cshtml' should be generated.
 
 Replace its content with the following:
+
 ```javascript
 <h4>Search for Secret</h4>
 <hr />
@@ -237,7 +244,9 @@ Replace its content with the following:
 
 
 1. Code logic for action `ShowSearchResults` in file `Controllers` -> 'SecretsController.cs`:
+
 Insert this code snippet:
+
 ```javascript
         // POST: Secrets/ShowSearchResults
         public async Task<IActionResult> ShowSearchResults(String SearchPhrase)
@@ -263,6 +272,7 @@ At this point, we have a fully functional web site.
 
 1. Limit the display of "Index" to relevent <li> elements and dislpay full table only when clicked on "Detail".
 Edit file `Views` -> `Secrets` - "Index.cshtml" and make sure the table tag contains the following:
+
 ```javascript
 <table class="table">
     <thead>
