@@ -112,7 +112,7 @@ Added View : \Views\Secrets\Index.cshtml
 
 ```
 
-
+<br />
  
 ### Create & configure the database
 
@@ -136,8 +136,9 @@ We will use the ORM method `migrate` to map views logic (a class) to the databas
  
 ![](./Static/PackageManagerConsole.png)
 
-1. In the console with prompt `PM>`, type __add-migration "initialsetup"__ and enter.
-1. type __update-database__ then enter.
+2. In the console with prompt `PM>`, type __add-migration "initialsetup"__ and enter.
+
+3. type __update-database__ then enter.
 
 __Console output:__
 
@@ -184,11 +185,12 @@ PM>
 
 1. Open file `View` -> `Shared` - `_Layout.cshtml`
 
-1. Insert new <li> element in the between the <ul class="navbar-nav flex-grow-1"> element as follow
+1. Insert new `<li>` element in the between the <ul class="navbar-nav flex-grow-1"> element as follow
 
 ```javascript
 <ul class="navbar-nav flex-grow-1">
     ...
+
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="Secrets" asp-action="Index">Secrets</a>
         </li>
@@ -198,7 +200,7 @@ PM>
 </ul>
 ```
 
-1. Code the action `ShowSearchForm` in file `Controllers` -> 'SecretController.cs'
+3. Code the action `ShowSearchForm` in file `Controllers` -> 'SecretController.cs'
 
 ```javascript
         // GET: Secrets/ShowSearchForm
@@ -210,7 +212,7 @@ PM>
         }
 ```
 
-1. Create a search form:  From the code above, right-click on 'ShowSearchForm()' and select `Add View...` with the following settings:
+4. Create a search form:  From the code above, right-click on 'ShowSearchForm()' and select `Add View...` with the following settings:
 
 ![](./Static/AddViewForSearchForm.PNG)
 
@@ -226,7 +228,7 @@ Replace its content with the following:
         <form asp-action="ShowSearchResults">
             <div class="form-group">
                 <label for="SearchPhrase" class="control-label"></label>
-                <input for="SearchPhrase" class="form-control" />
+                <input name="SearchPhrase" class="form-control" />
             </div>
             
             <div class="form-group">
@@ -243,7 +245,7 @@ Replace its content with the following:
 ```
 
 
-1. Code logic for action `ShowSearchResults` in file `Controllers` -> 'SecretsController.cs`:
+5. Code logic for action `ShowSearchResults` in file `Controllers` -> 'SecretsController.cs`:
 
 Insert this code snippet:
 
@@ -255,8 +257,9 @@ Insert this code snippet:
         }
 ```
 
- 
-* With the database connected, the Register feature should be functional at this time.
+<br />
+
+With the database connected, and new routes added to the NavBar, features such as `Register` and `Login` should be functional at this time.  Let's test.
 
 ![](./Static/RegisterFunction.PNG)
 
@@ -328,6 +331,7 @@ This enable register/login action before CRUD operations are allowed.
 ### Push codebase to GIT Revision Control
 
 1. Select `Git` -> `Create Git Repository..`
+
 ![](./Static/GitRepoPush.PNG)
 
 ### Deployment
