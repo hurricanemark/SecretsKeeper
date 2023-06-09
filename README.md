@@ -16,6 +16,7 @@ Together, ASP.NET Core is Full Stack having (database, business logic, HTML)
 
 An ASP.NET page is web page that contains a mix of HTML markup and dynamic ASP markup.  An ASP.NET is run on the server, combining the static HTML code, and updating the dynamic ASP elements to produce a final HTML page.
 
+<br />
 
 ![](./Static/ASPNETCORE.png)
 
@@ -28,7 +29,7 @@ Initial project MVC scaffolding should be compilable and runable.
 * Select `IIS` and `run`
 ![](./Static/ToolsSetAction.PNG)
 
-* Initial looks and feel
+* The initial bootstrap looks and feel:
 
 ![Initial project creation](./Static/WebAppEntryPoint.PNG)
 
@@ -83,6 +84,7 @@ The __M__ odel __V__ iew __C__ ontroller helps to enforce separation of concerns
     }
 ```
 
+<br />
 
 ### *`Controller`* handles page events and navigation between pages
 
@@ -323,7 +325,7 @@ Edit file `Views` -> `Secrets` - "Index.cshtml" and make sure the table tag cont
 
 ##### Enable 'Authorization' on SecretsController.
 
-This enable register/login action before CRUD operations are allowed.
+This enables register/login action before CRUD operations are allowed.
 
 1.  Insert [Authorize] decorration on top of each method in file `Controlers` -> "SecretsController.cs".
 
