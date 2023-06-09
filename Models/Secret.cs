@@ -8,6 +8,8 @@
         public string eMail { get; set; }
         public string UserId { get; set; }
         public string Password { get; set; }
+        public bool isTrial { get; set; }
+        public string ExpirationDate { get; set; }
         public string Question1 { get; set; }
         public string Answer1 { get; set; }
         public string Question2 { get; set; }

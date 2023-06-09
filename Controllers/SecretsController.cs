@@ -31,7 +31,7 @@ namespace SecretsKeeper.Controllers
 
         // GET: Secrets/ShowSearchForm
         [Authorize]
-        public async Task<IActionResult> ShowNewSearchForm()
+        public IActionResult ShowNewSearchForm()
         {
             return View();
         }

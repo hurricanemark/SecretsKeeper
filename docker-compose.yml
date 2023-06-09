@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  secretskeeper:
+    image: ${DOCKER_REGISTRY-}secretskeeper
+    build:
+      context: . # build the Docker image 
+      dockerfile: Dockerfile
+  sql:
+    image: "mcr.microsoft.com/mssql/server:2022-latest"
+    container_name: sql_server2022
+    ports: # not actually needed, because the two services are on the same network.
+      - "1433:1433" 
+    environment:
+      - ACCEPT_EULA=y
+      - SA_PASSWORD=hcinyoV326-:)WestOfOctober
