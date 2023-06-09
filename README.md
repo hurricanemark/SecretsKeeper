@@ -342,10 +342,31 @@ From the MS Visual Studio 2022, you can decide to deploy your web application on
 
 Containerize the ASP.NET Core application and SQL Server with Docker deserves a more detailed section.  We will attempt to focus on the essentials to enable this specific deployment.  In general, steps we take here are applicable to most use cases involving containerizign ASP.NET Core application and SQL Server with Docker.
 
-* Go back and determine if you're dockerize for Linux or Windows.  This will determine which base image to use.
-* 
+* Go back and determine if you're dockerized for Linux or Windows.  This will determine which base image to use.
 
-1.  Select `Build` -> `Publish SecretsKeeper`
+
+
+
+[Note, you can use the DockerCli to control which docker engine to run.](https://forums.docker.com/t/cli-to-switch-between-linux-and-windows-images/30297)
+
+
+```
+$ ./DockerCli.exe
+Usage: DockerCli.exe [-SwitchDaemon] [-Version]
+    -Version: Show the Docker for Windows version information
+    -SwitchDaemon: Point the Docker CLI to either Linux containers or Windows containers
+    -SharedDrives: List the shared drives
+
+You can control which engine you want to switch to using option:
+
+    -SwitchLinuxEngine
+    -SwitchWindowsEngine
+```
+
+<br />
+
+
+  Select `Build` -> `Publish SecretsKeeper`
 
 
 ## Conclusion
